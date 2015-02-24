@@ -1,6 +1,7 @@
 #!/bin/bash
 set -v
 if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
+  git branch -r
   gem install --no-document rubocop-select rubocop rubocop-checkstyle_formatter \
               checkstyle_filter-git saddler saddler-reporter-github
   git diff -z --name-only ..origin/master \
