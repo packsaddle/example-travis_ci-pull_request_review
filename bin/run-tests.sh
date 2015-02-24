@@ -1,6 +1,6 @@
 #!/bin/bash
 set -v
-echo TRAVIS_PULL_REQUEST
+echo ${TRAVIS_PULL_REQUEST}
 if [ -v "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
   gem install rubocop-select rubocop rubocop-formatter-checkstyle_formatter \
               checkstyle_filter-git saddler saddler-reporter-github
