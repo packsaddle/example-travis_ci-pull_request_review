@@ -1,4 +1,4 @@
-require "example/travis_ci/version"
+require 'example/travis_ci/version'
 
 module Example
   module TravisCi
