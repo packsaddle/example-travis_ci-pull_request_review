@@ -16,4 +16,4 @@ branches:
 env:
   global:
     - secure: "UOtW6cyAgaLqC4OZ1/t4H5nJkFHEgAag2LsffHvCWaxsANmgGoqdHqKEDMQMJIntEc2woCNzM2ZNyUuvMvRu9A9OiXhRfh6fXnI3Rcwx2mxsaATLV4qLd9Yf+UYlQRXOU0c6QlWNPXhd0MetguK/QZ2OQXCVxRHNx09hReZJqWs="
-script: ./bin/run-tests.sh
+before_script: ./bin/run-rubocop.sh
