@@ -2,13 +2,13 @@
 
 run rubocop and pull request review comment
 
-[Actual script for TravisCI](./bin/run-tests.sh)
+[Actual script for TravisCI](./bin/run-rubocop.sh)
 
 ```
 # .travis.yml
-script: ./bin/run-tests.sh
+before_script: ./bin/run-rubocop.sh
 
-# bin/run-tests.sh
+# bin/run-rubocop.sh
 #!/bin/bash
 set -v
 if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
@@ -25,8 +25,12 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
       --require saddler/reporter/github \
       --reporter Saddler::Reporter::Github::PullRequestReviewComment
 fi
-bundle exec rake
+exit 0
 ```
+
+If you prefer to exec `after_script`, you can set this. see: [Travis CI: Configuring your build](http://docs.travis-ci.com/user/build-configuration/)
+
+## Setting
 
 [Travis CI: Encryption keys](http://docs.travis-ci.com/user/encryption-keys/)
 
