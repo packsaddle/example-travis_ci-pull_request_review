@@ -28,6 +28,10 @@ fi
 exit 0
 ```
 
+If you prefer to exec `after_script`, you can set this. see: [Travis CI: Configuring your build](http://docs.travis-ci.com/user/build-configuration/)
+
+## Setting
+
 [Travis CI: Encryption keys](http://docs.travis-ci.com/user/encryption-keys/)
 
 ```
