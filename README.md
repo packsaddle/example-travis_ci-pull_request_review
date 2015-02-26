@@ -36,7 +36,7 @@ If you prefer to exec `after_script`, you can set this. see: [Travis CI: Configu
 
 ```
 $ gem install travis
-$ travis encrypt -r <repos_name> "GITHUB_ACCESS_TOKEN=<github_token>"
+$ travis encrypt -r <owner_name>/<repos_name> "GITHUB_ACCESS_TOKEN=<github_token>"
 ```
 
 ## Contributing
