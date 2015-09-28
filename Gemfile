@@ -4,3 +4,4 @@ source 'https://rubygems.org'
 gemspec
 gem 'saddler'
 gem 'saddler-reporter-github'
+gem 'saddler-reporter-support-git', github: 'packsaddle/ruby-saddler-reporter-support-git'
