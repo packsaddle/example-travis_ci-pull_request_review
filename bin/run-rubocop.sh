@@ -12,7 +12,7 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
 
   echo gem install
   gem install --no-document rubocop-select rubocop rubocop-checkstyle_formatter \
-              checkstyle_filter-git saddler saddler-reporter-github
+              checkstyle_filter-git
 
   echo git diff
   git diff -z --name-only origin/master
@@ -43,7 +43,7 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
        --require rubocop/formatter/checkstyle_formatter \
        --format RuboCop::Formatter::CheckstyleFormatter \
    | checkstyle_filter-git diff origin/master \
-   | saddler report \
+   | bundle exec saddler report \
       --require saddler/reporter/github \
       --reporter Saddler::Reporter::Github::PullRequestReviewComment
 fi
